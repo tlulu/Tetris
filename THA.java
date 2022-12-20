@@ -153,13 +153,13 @@ class MyPanel extends JPanel implements ActionListener, KeyListener,MouseListene
 					shapes.get(0).turn(map,shapeTrack);
 				}
 			}
-			if(keyText.equalsIgnoreCase("left")){
+			if(keyText.equalsIgnoreCase("left") || keyText.equalsIgnoreCase("←")){
 				character.moveLeft();
 			}
-			if(keyText.equalsIgnoreCase("right")){
+			if(keyText.equalsIgnoreCase("right") || keyText.equalsIgnoreCase("→")){
 				character.moveRight();
 			}
-			if(keyText.equalsIgnoreCase("up")){
+			if(keyText.equalsIgnoreCase("up") || keyText.equalsIgnoreCase("↑")){
 				character.jump();
 			}
 			if (keyText.equalsIgnoreCase("Slash")){		 
@@ -175,10 +175,10 @@ class MyPanel extends JPanel implements ActionListener, KeyListener,MouseListene
 	public void keyReleased(KeyEvent key) {
 		String keyText = KeyEvent.getKeyText(key.getKeyCode());
 		if(!pause){
-			if(keyText.equalsIgnoreCase("left")){
+			if(keyText.equalsIgnoreCase("left") || keyText.equalsIgnoreCase("←")){
 				character.stop();
 			}
-			if(keyText.equalsIgnoreCase("right")){
+			if(keyText.equalsIgnoreCase("right") || keyText.equalsIgnoreCase("→")){
 				character.stop();
 			}
 		}
